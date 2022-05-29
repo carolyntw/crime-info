@@ -14,7 +14,9 @@ Close
 """
 from errno import E2BIG
 from tkinter import *
-import crime_info_backend
+from crime_info_backend import Database
+
+database = Database("crimes.db")
 
 def get_selected_row(event):
     #when the function is called, the indented block under try will be executed.
@@ -42,25 +44,25 @@ def get_selected_row(event):
 def view_command():
     #ensure deleting all from the index of zero to the end
     list1.delete(0,END)
-    for row in crime_info_backend.view():
+    for row in database.view():
         #the new rows will be put at the end of the list box
         list1.insert(END,row)
 
 def search_command():
     list1.delete(0,END)
-    for row in crime_info_backend.search(type_text.get(),street_text.get(),zipcode_text.get(),day_text.get(),month_text.get(),year_text.get()):
+    for row in database.search(type_text.get(),street_text.get(),zipcode_text.get(),day_text.get(),month_text.get(),year_text.get()):
         list1.insert(END,row)
 
 def insert_command():
-    crime_info_backend.insert(type_text.get(),street_text.get(),zipcode_text.get(),day_text.get(),month_text.get(),year_text.get())
+    database.insert(type_text.get(),street_text.get(),zipcode_text.get(),day_text.get(),month_text.get(),year_text.get())
     list1.delete(0,END)
     list1.insert(END,(type_text.get(),street_text.get(),zipcode_text.get(),day_text.get(),month_text.get(),year_text.get()))
 
 def delete_command():
-    crime_info_backend.delete(selected_tuple[0])
+    database.delete(selected_tuple[0])
 
 def update_command():
-    crime_info_backend.update(selected_tuple[0],type_text.get(),street_text.get(),zipcode_text.get(),day_text.get(),month_text.get(),year_text.get())
+    database.update(selected_tuple[0],type_text.get(),street_text.get(),zipcode_text.get(),day_text.get(),month_text.get(),year_text.get())
 
 
 window = Tk()
