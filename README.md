@@ -16,4 +16,5 @@ import sqlite3
 
 ## Application Interface
 This is the interface of the application. Users can delete or add crime incidents by typing information in the boxes and clicking the bottons.
+
 ![image](https://github.com/carolyntw/crime-info/blob/main/image/interface.png)
