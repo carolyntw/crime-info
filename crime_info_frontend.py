@@ -5,7 +5,6 @@ Type, Day, Month, Year, Street, Zipcode
 User can:
 View all, Search incident, Add incident, Update incident, Delete ,Close
 """ 
-from errno import E2BIG
 from tkinter import *
 from crime_info_backend import Database
 
