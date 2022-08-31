@@ -13,4 +13,4 @@ import sqlite3
 ```
 
 ## Application Interface
-![image](https://github.com/carolyntw/crime-info/main/image/Crime_Info.png "Interface")
+![image](https://github.com/carolyntw/crime-info/blob/main/image/interface.png)
