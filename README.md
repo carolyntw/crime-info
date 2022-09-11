@@ -1,4 +1,4 @@
-# Crime Info
+# Crime Information
 This is a crime data collector app built with Python and Flask.
 
 ## Installation
